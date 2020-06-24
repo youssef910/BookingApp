@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import AppHeader from "./components/AppHeader";
+import Nav from "./components/Nav";
+import Home from "./components/Home";
+import AddBooking from "./components/AddBooking";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import "./App.css";
+import CurrentBookings from "./components/CurrentBookings";
+import { Container } from "semantic-ui-react";
+import GuestList from "./utils/GuestList";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = { bookings: GuestList };
+
+  addNewBooking = (booking) => {
+    const updatedBookings = this.state.bookings;
+    updatedBookings.push(booking);
+    this.setState({ bookings: updatedBookings });
+  };
+  render() {
+    return (
+      <Container className="App">
+        <Router>
+          <AppHeader />
+          <Nav></Nav>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/addBooking">
+              <AddBooking addNewBooking={this.addNewBooking} />
+            </Route>
+            <Route path="/currentBookings">
+              <CurrentBookings bookings={this.state.bookings} />
+            </Route>
+          </Switch>
+        </Router>
+      </Container>
+    );
+  }
 }
 
 export default App;

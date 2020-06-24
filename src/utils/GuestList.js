@@ -1,0 +1,51 @@
+const GuestList = [
+  {
+    firstName: "gust",
+    lastName: "one",
+    diningDate: "2020-06-03",
+    numberOfCovers: "3",
+    phoneNumber: "077771111",
+    email: "gestOne@guest.com",
+  },
+  {
+    firstName: "gust",
+    lastName: "two",
+    diningDate: "2020-06-03",
+    numberOfCovers: "5",
+    phoneNumber: "077772222",
+    email: "gest2@guest.com",
+  },
+  {
+    firstName: "gust",
+    lastName: "three",
+    diningDate: "2020-06-03",
+    numberOfCovers: "4",
+    phoneNumber: "0777733333",
+    email: "gest3@guest.com",
+  },
+  {
+    firstName: "gust",
+    lastName: "four",
+    diningDate: "2020-06-03",
+    numberOfCovers: "5",
+    phoneNumber: "0777744444",
+    email: "gest4@guest.com",
+  },
+  {
+    firstName: "gust",
+    lastName: "five",
+    diningDate: "2020-06-03",
+    numberOfCovers: "2",
+    phoneNumber: "077775555",
+    email: "gest5@guest.com",
+  },
+  {
+    firstName: "gust",
+    lastName: "six",
+    diningDate: "2020-06-03",
+    numberOfCovers: "1",
+    phoneNumber: "077776666",
+    email: "gest6@guest.com",
+  },
+];
+export default GuestList;
