@@ -1,9 +1,7 @@
 import React from "react";
 import { Table } from "semantic-ui-react";
 import TableRow from "./TableRow";
-// import GuestList from "../utils/GuestList";
 export default (props) => {
-  console.log("ssss", props);
   return (
     <Table singleLine striped inverted>
       <Table.Header>
@@ -24,4 +22,4 @@ export default (props) => {
       </Table.Body>
     </Table>
   );
-};  
+};
