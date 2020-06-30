@@ -142,13 +142,5 @@ function AddBooking(callback, addNewBooking) {
     </div>
   );
 }
-AddBooking.propTypes = {
-  firstName: PropTypes.string.isRequired,
-  lastName: PropTypes.string.isRequired,
-  diningDate: PropTypes.instanceOf(Date).isRequired,
-  numberOfCovers: PropTypes.number.isRequired,
-  phoneNumber: PropTypes.number.isRequired,
-  email: PropTypes.string.isRequired,
-};
 
 export default AddBooking;
