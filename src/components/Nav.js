@@ -17,7 +17,6 @@ export default class Nav extends Component {
     return (
       <Menu fluid inverted>
         <Menu.Item
-          icon="home"
           as={Link}
           to="/"
           name="home"

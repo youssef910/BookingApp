@@ -1,6 +1,6 @@
 import React from "react";
 import { Table, Dropdown } from "semantic-ui-react";
-
+import PropTypes from "prop-types";
 const statusOptions = [
   {
     key: "Not arrived",
@@ -9,7 +9,7 @@ const statusOptions = [
   },
   { key: "Seated", text: "Seated", value: "Seated" },
 ];
-export default (props) => {
+const TableRow = (props) => {
   return (
     <Table.Row>
       <Table.Cell>{props.item.firstName}</Table.Cell>
@@ -30,3 +30,13 @@ export default (props) => {
     </Table.Row>
   );
 };
+
+TableRow.prototypes = {
+  firstName: PropTypes.string.isRequired,
+  lastName: PropTypes.string.isRequired,
+  diningDate: PropTypes.instanceOf(Date).isRequired,
+  numberOfCovers: PropTypes.number.isRequired,
+  phoneNumber: PropTypes.number.isRequired,
+  email: PropTypes.string.isRequired,
+};
+export default TableRow;

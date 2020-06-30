@@ -1,7 +1,7 @@
 import React from "react";
 import { Table } from "semantic-ui-react";
 import TableRow from "./TableRow";
-export default (props) => {
+const CurrentBookings = (props) => {
   return (
     <Table singleLine striped inverted>
       <Table.Header>
@@ -16,10 +16,11 @@ export default (props) => {
         </Table.Row>
       </Table.Header>
       <Table.Body>
-        {props.bookings.map((guest) => (
-          <TableRow item={guest} />
+        {props.bookings.map((index, guest) => (
+          <TableRow key={index} item={guest} />
         ))}
       </Table.Body>
     </Table>
   );
 };
+export default CurrentBookings;
